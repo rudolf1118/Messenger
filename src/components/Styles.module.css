@@ -1,0 +1,273 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :click {
+    outline: none;
+}
+
+a:focus, a:click {
+    outline: none;
+}
+
+nav, footer, header, aside {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+/*--------------------*/
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #eceff4;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.content__row {
+    display: flex;
+}
+
+.setting__icon1 {
+    width: 40px;
+    height: 40px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 16px;
+    width: 276px;
+    height: 40px;
+    /* Light grey */
+    background: #F5F5F5;
+    border-radius: 22px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+    margin-left: 25px;
+}
+
+.people__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.person {
+    margin-right: 10px;
+    -webkit-transition: 0.5s ease; /* Safari and Chrome */
+    -moz-transition: 0.5s ease; /* Firefox 4 */
+    -o-transition: 0.5s ease; /* Opera */
+}
+
+.person__row {
+    display: flex;
+}
+
+.person__rerow {
+    display: flex;
+    width: 365px;
+    justify-content: space-between;
+
+}
+
+.person__row:first-child img {
+
+    /* Iceberg Blue */
+    background: #8BABD8;
+
+}
+
+.person {
+    margin-top: 12px;
+}
+
+.person__leftColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.person__rightColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.person__img img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+}
+
+.person__names {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    /* identical to box height, or 125% */
+
+    /* Rich Black */
+    color: #011627;
+}
+
+.person__lastMessage {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    /* identical to box height, or 129% */
+    margin-top: 5px;
+    /* Navy Grey */
+    color: #707991;
+
+
+}
+
+.person__time {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    /* identical to box height, or 133% */
+
+    /* Navy Grey */
+    color: #707991;
+}
+
+.person__messageNum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+
+    /* Light Green */
+    background: #62de62;
+    border-radius: 25px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-top: 10px;
+}
+
+.person__messageNum span {
+    /* 12-Reg */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    /* identical to box height, or 133% */
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content {
+    margin-left: 26px;
+}
+
+.person__leftColumn {
+    margin-left: 20px;
+}
+
+.person__rightColumn {
+    margin-left: 44px;
+}
+.person:hover{
+    background: rgba(245, 245, 245, 1);
+    padding: 10px;
+    transition: 500ms;
+}
+.person:nth-child(8) {
+    background: rgba(245, 245, 245, 1);
+    padding: 10px;
+}
