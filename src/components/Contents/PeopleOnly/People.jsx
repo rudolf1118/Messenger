@@ -3,6 +3,7 @@ import classes from '../../Styles.module.css'
 import Person from "./Person";
 import {data} from "../../Data";
 import Chat from "../../AloneChat/Chat";
+import {NavLink} from "react-router-dom";
 
 const People=()=>{
     return (
@@ -11,8 +12,7 @@ const People=()=>{
                 <div className={classes.people__column}>
                     {data.map((element)=>{
                       return(<div>
-                          <Person data={element}/>
-                          <Chat data={data}/>
+                                  <Person data={element}/>
                           </div>
                       )
                     })}

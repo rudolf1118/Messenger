@@ -94,6 +94,9 @@ body {
     margin-top: 10px;
 }
 
+.container {
+    margin: 0px auto;
+}
 .content__row {
     display: flex;
 }
@@ -101,6 +104,10 @@ body {
 .setting__icon1 {
     width: 40px;
     height: 40px;
+}
+
+.people {
+    margin-top: 10px;
 }
 
 .search {
@@ -118,7 +125,7 @@ body {
     flex: none;
     order: 1;
     flex-grow: 1;
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 .people__column {
@@ -135,6 +142,28 @@ body {
 
 .person__row {
     display: flex;
+}
+
+.text {
+    font-size: 50px;
+}
+
+.setting__icon1 {
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.setting__icon1:hover {
+    -webkit-transform: scale(3);
+    -ms-ransform: scale(3);
+    transform: rotate(90deg);
+    transition: 200ms;
+
+}
+
+.setting__icon1 {
+
+    border-radius: 25px;
 }
 
 .person__rerow {
@@ -262,12 +291,152 @@ body {
 .person__rightColumn {
     margin-left: 44px;
 }
-.person:hover{
+
+.person:hover {
     background: rgba(245, 245, 245, 1);
     padding: 10px;
     transition: 500ms;
 }
+
 .person:nth-child(8) {
     background: rgba(245, 245, 245, 1);
     padding: 10px;
+}
+
+.person:active {
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.personColor {
+    background-color: rgb(218, 218, 218);
+    padding: 10px;
+}
+
+.taskbar{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    margin-left: -20px;
+    overflow: hidden;
+    transition: 850ms  ease-in-out;;
+    width: 250px;
+
+
+}
+.taskbarNone{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin-left: -20px;
+    position: fixed;
+    overflow: hidden;
+    transition:850ms ease-in-out;
+    width: 40px;
+    margin-left:0.0001px
+}
+
+.taskbarNone .taskbar__column {
+    display: none;
+}
+
+
+.taskbar__column{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.taskbar__user{
+    display: flex;
+    flex-direction: column;
+}
+.taskbar__user img {
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+}
+.taskbar__userColumn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.taskbar__midColumn{
+    display: flex;
+    flex-direction: column;
+}
+.taskbar__lastColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.taskbar__userMail{
+    margin-top: 5px;
+    height: 19px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+/* identical to box height */
+
+/* Light / Subtext */
+color: #484848;
+
+}
+.taskbar__userName{
+    height: 22px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+
+    /* identical to box height */
+
+/* Light / Text */
+color: #222133;
+}
+
+
+.taskbar__statusRow{
+    display: flex;
+    margin-top: 10px;
+    font-size: 16px;
+    flex-direction: column;
+}
+.taskbar__change{
+    margin-top: 10px;
+    font-weight: bolder;
+    transition: 800ms;
+    color: #142400;
+}
+.taskbar__change:hover{
+    color:#8babd8;
+    cursor: pointer;
+    transition: 500ms;
+}
+.taskbar__button{
+    margin-top:2px;
+}
+.online{
+    color: #12a428;
+    transition: 850ms;
+
+
+}
+.offline{
+    color: darkred;
+    transition: 850ms;
+}
+.taskbar__userRow{
+    display: flex;
+    align-items: center;
+}
+.taskbar__status{
+    margin-left: 20px;
+    font-size: 16px;
 }

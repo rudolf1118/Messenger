@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "../../Styles.module.css";
 import {MdVerified} from "react-icons/md"
+import { NavLink } from "react-router-dom";
+import Nav from "../../Navigation/Nav";
 
 const Person=({data})=>{
-    const {id, img, name, surname, message, messageNum}=data;
+    const {id, img, name, surname, message, messageNum,status}=data;
+    const [color,setColor]=useState(false);
+    const [nav,setNav]=useState(true);
     let dateObj=new Date();
     let hour=dateObj.getHours();
     let minute=dateObj.getMinutes()
+
     const areyou=(el)=>{
         if (el < 10) {
             el="0" + el;
@@ -15,6 +20,13 @@ const Person=({data})=>{
             return el
         }
     }
+
+    const personner = (el)=>{
+        setColor(!color);
+
+    }
+
+
     // 38 letter
     const lettercut=(letter)=>{
         if (letter.length > 37) {
@@ -24,8 +36,8 @@ const Person=({data})=>{
     }
 
     return (
-        <div className={classes.person} id={id}>
-            <div className={classes.container}>
+        <div className={color ? classes.personColor : classes.person } id={id} onClick={personner}>
+            <NavLink to={nav ? `/person/${name}` : `/person`  } className={classes.container} onClick={()=>setNav(!nav)}>
                 <div className={classes.person__row}>
                     <div className={classes.person__img}>
                         <img src={img}/>
@@ -47,7 +59,7 @@ const Person=({data})=>{
                         </div>
                     </div>
                 </div>
-            </div>
+            </NavLink>
         </div>
 
     );
